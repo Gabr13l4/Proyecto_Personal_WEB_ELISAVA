@@ -1,7 +1,7 @@
 # Context del projecte
 
 ## Informació general
-- **Repositori:** `Paladini-Elisava/Projecte-Inicial`
+- **Repositori:** \Gabr13l4/Proyecto_Personal_WEB_ELISAVA``
 - **Branca consultada:** `main`
 - **Tecnologies:** HTML, CSS i JavaScript natius.
 - **Project:** Dual Autoimmunity Digital Platform (Celiac Disease & Hashimoto’s Thyroiditis)
@@ -22,6 +22,5 @@ Will handle the interactive tri-mode toggle switching between Celiac view, Hashi
 Actualment conté només el títol del projecte.
 
 ## Consideracions
-- El contingut de la pàgina encara inclou textos de mostra.
-- No s'ha identificat cap `package.json`; el projecte no sembla requerir un procés de compilació basat en Node.js.
-- Aquest document descriu els fitxers revisats i s'ha d'actualitzar quan canviï l'estructura.
+- `index.html`, `memoria.md`, and `log.md` have been updated with the project's research question, narrative, and visual identity.
+- `style.css` and `script.js` still retain the base starter styles/logic and will be updated in the next phase to match the Figma prototype.

@@ -36,6 +36,12 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 
 ---
 
+## 2026-11-02 – Revisió inicial i documentació
+•⁠  ⁠*Canvis:* revisats ⁠ README.md ⁠, ⁠ index.html ⁠, ⁠ style.css ⁠ i ⁠ script.js ⁠; afegits ⁠ memoria.md ⁠, ⁠ context.md ⁠ i aquest registre.
+•⁠  ⁠*Motiu:* documentar l'estructura inicial i establir una base per al manteniment.
+•⁠  ⁠*Verificació:* llegits els quatre fitxers originals; identificada una pàgina HTML bàsica amb CSS i JavaScript.
+•⁠  ⁠*Pendents/incidències:* definir el contingut definitiu de la pàgina i millorar el disseny.
+
 ## 2026-11-17 — Project definition, research synthesis & initial content update
 - **Canvis:** Updated `context.md`, `memoria.md`, and `index.html` with the project title (*Dual Autoimmunity: Celiac & Hashimoto’s*), descriptive summary, primary research question, 4Q narrative, MVP feature definitions, and Figma color palette (`#31263E`, `#FBF5F3`, `#FF8552`, `#8765DD`).
 - **Motiu:** Adapt the starter template to the specific research findings, UX architecture (tri-mode toggle), and visual identity defined for bridging Celiac Disease and Hashimoto’s Thyroiditis.

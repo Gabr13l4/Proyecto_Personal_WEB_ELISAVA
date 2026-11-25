@@ -36,6 +36,11 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 
 ---
 
+## 2026-11-25 — Route condition choices to dedicated sections
+- **Canvis:** Added a Celiac section, kept the existing Hashimoto’s tools in their own section, and renamed the shared-care destination to In Common.
+- **Motiu:** Give each home-page topic choice a dedicated place for current and future content.
+- **Verificació:** Clicked Celiac, In common, and Hashimoto’s on the published page and confirmed each navigates to its matching section.
+
 ## 2026-11-24 — Darkened section 03 with a continuous fade
 - **Canvis:** Changed section 03 to deep plum, updated text and cards for contrast, and made section 02 fade into the same plum at its lower edge on desktop and mobile.
 - **Motiu:** Give the Intersection section a darker canvas without a hard divider between sections 02 and 03.

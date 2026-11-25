@@ -3,21 +3,21 @@ const modes = {
     kicker: "CELIAC CARE",
     title: "Feel more sure about food.",
     copy: "Explore gluten-aware choices and notice how everyday food decisions fit into your bigger health picture.",
-    action: "Explore celiac care",
+    action: "Explore celiac care", target: "#celiac",
     color: "coral",
   },
   both: {
     kicker: "THE OVERLAP",
     title: "See the bigger picture.",
     copy: "Make sense of shared symptoms, food choices, and the small details that connect your care.",
-    action: "Explore the overlap",
+    action: "Explore the overlap", target: "#in-common",
     color: "coral",
   },
   hashimoto: {
     kicker: "HASHIMOTO’S CARE",
     title: "Find a rhythm that fits.",
     copy: "Bring symptoms, medication routines, and daily patterns into one clearer view.",
-    action: "Explore Hashimoto’s care",
+    action: "Explore Hashimoto’s care", target: "#hashimoto",
     color: "lavender",
   },
 };
@@ -48,7 +48,7 @@ modeButtons.forEach((button) => {
     arrow.setAttribute("aria-hidden", "true");
     arrow.textContent = "↗";
     modeLink.append(arrow);
-    modeKicker.dataset.tone = mode.color;
+    modeKicker.dataset.tone = mode.color; modeLink.href = mode.target; modeLink.click();
   });
 });
 

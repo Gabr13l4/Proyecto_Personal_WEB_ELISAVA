@@ -337,3 +337,30 @@ body { background: var(--paper); color: var(--plum); }
 .journal{grid-column:1/-1;border-top:1px solid #eee7ee;padding-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}.journal h4,.med-scores h4,.med-history h4{font:700 16px Manrope,sans-serif;margin:0 0 12px}.journal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.journal-grid button{border:0;background:#f4eff4;border-radius:8px;min-height:30px;color:#554c57;cursor:pointer}.journal-grid button.has-entry{background:#dfd0e2}.journal-grid button.is-current{outline:2px solid #94759a}.journal-grid button:empty{visibility:hidden}.journal textarea,.med-form textarea,.med-note-label textarea{width:100%;border:1px solid #e1d9e2;border-radius:10px;padding:10px;font:12px "DM Sans",sans-serif;resize:vertical}.journal textarea{min-height:105px}.journal-status{font-size:10px;color:#766b79}
 .med-form{background:#f8f5f6;padding:22px;border-radius:18px}.med-form h3{font:700 18px Manrope,sans-serif;margin:0 0 12px}.med-form label{display:block;font-size:10px;color:#615765;margin:10px 0}.med-form input:not([type=checkbox]):not([type=hidden]),.med-form textarea{display:block;width:100%;margin-top:5px;border:1px solid #e2d9e2;border-radius:8px;padding:9px;background:white;font:12px "DM Sans",sans-serif}.med-date-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px}.med-days{border:0;padding:0;margin:8px 0}.med-days legend{font-size:10px}.med-days label{display:inline-block;margin:6px 9px 0 0}.med-days input{accent-color:#927698}.med-scores{grid-column:1/-1;border-top:1px solid #e8e0e8;padding-top:17px}.med-scores>p{margin:-5px 0 12px}.med-score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 16px}.med-score-grid label,.med-note-label{font-size:10px;color:#615765}.med-score-grid input{display:block}.med-history{grid-column:1/-1}.med-history-list{display:grid;gap:7px}.med-entry{background:#f7f3f7;padding:11px 13px;border-radius:10px;font-size:10px;line-height:1.6}
 @media(max-width:760px){.zipper-panel,.med-panel{grid-template-columns:1fr;padding:19px}.journal{grid-template-columns:1fr}.med-score-grid{grid-template-columns:1fr 1fr}.med-scores,.med-history{grid-column:auto}}
+
+/* Emotion zipper: use the original project palette and keep the check-in close to its Figma composition. */
+.zipper-panel{grid-template-columns:minmax(245px,.78fr) minmax(0,1.22fr);gap:24px 34px;padding:clamp(22px,4vw,48px);border-radius:30px;background:rgba(255,255,255,.82);box-shadow:0 20px 65px rgba(49,38,62,.08)}
+.zipper-intro{padding:8px 0 0}.zipper-intro .panel-overline{color:var(--muted)}.zipper-intro h3{font-size:clamp(27px,3vw,38px);line-height:1.16;color:var(--plum)}.zipper-intro>p:not(.panel-overline){font-size:15px;color:var(--plum);opacity:.82;max-width:32ch}
+.zipper-intro .panel-note{border-top:1px solid var(--line);padding-top:16px;color:var(--muted)}
+.zipper-form{align-self:start;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,3vw,34px)}
+.zipper-row{grid-template-columns:minmax(95px, .7fr) minmax(100px,1fr) minmax(95px,.8fr);gap:14px;margin:16px 0;font-size:clamp(13px,1.15vw,16px);color:var(--plum)}
+.zipper-row input{accent-color:var(--lavender);height:22px;cursor:pointer}.zipper-row output{font-weight:600;color:var(--plum);text-align:left}
+.zipper-row input::-webkit-slider-runnable-track{height:7px;border-radius:99px;background:rgba(135,101,221,.22)}
+.zipper-row input::-webkit-slider-thumb{margin-top:-5px;background:var(--lavender);border:2px solid var(--paper);box-shadow:0 0 0 1px var(--lavender)}
+.zipper-row input::-moz-range-track{height:7px;border-radius:99px;background:rgba(135,101,221,.22)}
+.zipper-row input::-moz-range-thumb{background:var(--lavender);border:2px solid var(--paper);box-shadow:0 0 0 1px var(--lavender)}
+.zipper-zip{height:86px;margin:7px 0 13px}
+.zipper-zip:before{height:2px;background:var(--lavender);opacity:.45;left:8%;right:8%}
+.zipper-tooth{width:29px;height:32px;border:1.5px solid var(--lavender);background:var(--paper);color:var(--plum);font-size:13px}
+.zipper-pull{background:var(--plum);color:var(--paper);box-shadow:0 5px 14px rgba(49,38,62,.2);border:2px solid var(--coral)}
+.zipper-reading{font-size:clamp(17px,1.65vw,22px);color:var(--plum);text-align:left;margin:0 0 17px}
+.zipper-save{gap:14px}.zipper-save p{font-size:12px;color:var(--muted)}
+.zipper-panel .action-button{background:var(--plum);color:var(--paper);border:1px solid var(--plum);border-radius:12px;padding:14px 18px}.zipper-panel .action-button span{color:var(--coral)}
+.journal{padding-top:28px;gap:24px 38px}.journal h4{font-size:19px;color:var(--plum)}
+.journal-grid button{background:rgba(135,101,221,.09);color:var(--plum);min-height:38px}
+.journal-grid button.has-entry{background:rgba(135,101,221,.2);box-shadow:inset 0 -2px 0 var(--lavender)}
+.journal-grid button.is-current{outline:2px solid var(--coral);outline-offset:1px}
+.journal textarea{border-color:var(--line);background:var(--paper);color:var(--plum);font:14px/1.5 "DM Sans",sans-serif}
+.journal textarea:focus{outline:2px solid var(--lavender);outline-offset:2px}
+.journal-status{font-size:12px;color:var(--muted)}
+@media(max-width:700px){.zipper-panel{grid-template-columns:1fr;gap:22px;padding:22px;border-radius:24px}.zipper-form{padding:20px 16px}.zipper-row{grid-template-columns:95px minmax(70px,1fr) 95px;gap:9px;font-size:12px}.journal{grid-template-columns:1fr}.zipper-reading{text-align:center}.zipper-save{justify-content:center}}

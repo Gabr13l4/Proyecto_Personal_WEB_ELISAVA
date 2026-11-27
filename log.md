@@ -36,6 +36,10 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 
 ---
 
+## 2026-11-27 — Add playful visual details and stronger prompts
+- **Canvis:** Added animated star accents, soft color orbits, varied type emphasis, hover feedback, and clearer prompts to explore the map, tracker, and shared-care threads. Kept the project palette and respected reduced-motion preferences.
+- **Motiu:** Make the full site more lively and invite visitors to interact with its tools.
+
 ## 2026-11-27 — Replace the sample Celiac map with a live world map
 - **Canvis:** Added an interactive Leaflet world map with a plum-and-lavender-tinted OpenStreetMap basemap, city search, area-based gluten-free listings, dedicated-GF / dining / shop filters, map markers, and links to source records. Added a visible note that searches go to OpenStreetMap services. Added a clear note about incomplete community tags and venue safety verification.
 - **Motiu:** Make the Celiac section useful for exploring real mapped gluten-free options around the world.

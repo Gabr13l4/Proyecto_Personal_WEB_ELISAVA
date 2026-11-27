@@ -10,13 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=20261127-funky">
+  <link rel="stylesheet" href="style.css?v=20261127-celestial">
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous" defer></script>
-  <script src="script.js?v=20261127-worldmap3" defer></script>
+  <script src="script.js?v=20261127-conceptmap" defer></script>
 </head>
 <body>
   <main>
-  <section class="hero" id="top">
+  <section class="hero" id="top"><div class="drift-starfield" aria-hidden="true"><span class="drift-star" style="--sx:7%;--sy:16%;--ss:12px;--sd:7.2s;--sdelay:-0s">✦</span><span class="drift-star" style="--sx:19%;--sy:28%;--ss:8px;--sd:5.4s;--sdelay:-1.23s">✦</span><span class="drift-star" style="--sx:91%;--sy:14%;--ss:15px;--sd:7.2s;--sdelay:-2.46s">✦</span><span class="drift-star" style="--sx:84%;--sy:37%;--ss:9px;--sd:5.4s;--sdelay:-3.69s">✦</span><span class="drift-star" style="--sx:12%;--sy:72%;--ss:17px;--sd:7.2s;--sdelay:-4.92s">✦</span><span class="drift-star" style="--sx:96%;--sy:76%;--ss:8px;--sd:5.4s;--sdelay:-6.15s">✦</span><span class="drift-star" style="--sx:72%;--sy:88%;--ss:11px;--sd:7.2s;--sdelay:-0.3799999999999999s">✦</span><span class="drift-star" style="--sx:31%;--sy:82%;--ss:7px;--sd:5.4s;--sdelay:-1.6099999999999994s">✦</span><span class="drift-star" style="--sx:55%;--sy:13%;--ss:8px;--sd:7.2s;--sdelay:-2.84s">✦</span></div>
     <header class="topbar">
       <a class="wordmark" href="#top" aria-label="In Common home"><span class="mark" aria-hidden="true">+</span> in common</a>
       <div style="display:flex;align-items:center;gap:22px"><a class="top-link" href="#hashimoto">A more connected way to care <span aria-hidden="true">↗</span></a><span style="font-size:12px;color:#c8bfce;white-space:nowrap">Gabriela Turcza</span></div>
@@ -60,15 +60,15 @@
     </footer>
   </section>
 
-  <section class="celiac-section" id="celiac" aria-labelledby="celiac-title">
+  <section class="celiac-section" id="celiac" aria-labelledby="celiac-title"><div class="drift-starfield" aria-hidden="true"><span class="drift-star" style="--sx:16%;--sy:16%;--ss:12px;--sd:7.2s;--sdelay:-1s">✦</span><span class="drift-star" style="--sx:28%;--sy:28%;--ss:8px;--sd:5.4s;--sdelay:-2.23s">✦</span><span class="drift-star" style="--sx:2%;--sy:14%;--ss:15px;--sd:7.2s;--sdelay:-3.46s">✦</span><span class="drift-star" style="--sx:93%;--sy:37%;--ss:9px;--sd:5.4s;--sdelay:-4.6899999999999995s">✦</span><span class="drift-star" style="--sx:21%;--sy:72%;--ss:17px;--sd:7.2s;--sdelay:-5.92s">✦</span><span class="drift-star" style="--sx:7%;--sy:76%;--ss:8px;--sd:5.4s;--sdelay:-0.15000000000000036s">✦</span><span class="drift-star" style="--sx:81%;--sy:88%;--ss:11px;--sd:7.2s;--sdelay:-1.379999999999999s">✦</span><span class="drift-star" style="--sx:40%;--sy:82%;--ss:7px;--sd:5.4s;--sdelay:-2.6099999999999994s">✦</span><span class="drift-star" style="--sx:64%;--sy:13%;--ss:8px;--sd:7.2s;--sdelay:-3.84s">✦</span></div>
   <div class="celiac-wrap">
     <p class="celiac-eyebrow">01 / CELIAC, IN CONTEXT</p>
     <div class="celiac-heading"><div><h2 id="celiac-title">Find your next<br><em>gluten-free place.</em><span class="funky-star star-coral" aria-hidden="true">✦</span></h2></div><p>Choose a city, zoom in, and explore places tagged with gluten-free options around the world.</p></div>
     <div class="celiac-discovery gf-discovery">
       <div class="map-panel gf-map-panel">
-        <div class="map-toolbar"><div><span class="map-status-dot"></span><span>LIVE OPENSTREETMAP DATA</span></div><span class="map-demo-label">WORLD MAP</span></div>
-        <div class="gf-map-shell"><div class="demo-map gf-map" id="gluten-map" role="region" aria-label="Interactive world map showing places tagged with gluten-free options"></div><div class="map-hint" id="map-hint">Search for a city or zoom into an area, then choose “Search this area.”</div></div>
-        <div class="gf-map-footer"><span>Map data © OpenStreetMap contributors</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">About the map ↗</a></div>
+        <div class="map-toolbar"><div><span class="map-status-dot"></span><span>PLACES, NOT STREETS</span></div><span class="map-demo-label">WORLD MAP</span></div>
+        <div class="gf-map-shell"><div class="demo-map gf-map" id="gluten-map" role="region" aria-label="Conceptual world map showing gluten-free places as markers"></div><div class="map-hint" id="map-hint">Each dot marks a place tagged with gluten-free options. Search a place, then zoom in to explore.</div></div>
+        <div class="gf-map-footer"><span>Place data © OpenStreetMap contributors</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">About place data ↗</a></div>
         <p class="map-disclaimer">Listings are community-mapped and may be incomplete or out of date. A gluten-free tag is not a safety certification; confirm preparation and cross-contact directly with the venue.</p>
       </div>
       <div class="place-panel gf-place-panel">
@@ -87,7 +87,7 @@
       </div>
     </div>
   </div>
-</section>  <section class="tool-section" id="hashimoto" aria-labelledby="tools-title">
+</section>  <section class="tool-section" id="hashimoto" aria-labelledby="tools-title"><div class="drift-starfield" aria-hidden="true"><span class="drift-star" style="--sx:25%;--sy:16%;--ss:12px;--sd:7.2s;--sdelay:-2s">✦</span><span class="drift-star" style="--sx:37%;--sy:28%;--ss:8px;--sd:5.4s;--sdelay:-3.23s">✦</span><span class="drift-star" style="--sx:11%;--sy:14%;--ss:15px;--sd:7.2s;--sdelay:-4.46s">✦</span><span class="drift-star" style="--sx:4%;--sy:37%;--ss:9px;--sd:5.4s;--sdelay:-5.6899999999999995s">✦</span><span class="drift-star" style="--sx:30%;--sy:72%;--ss:17px;--sd:7.2s;--sdelay:-6.92s">✦</span><span class="drift-star" style="--sx:16%;--sy:76%;--ss:8px;--sd:5.4s;--sdelay:-1.1500000000000004s">✦</span><span class="drift-star" style="--sx:90%;--sy:88%;--ss:11px;--sd:7.2s;--sdelay:-2.379999999999999s">✦</span><span class="drift-star" style="--sx:49%;--sy:82%;--ss:7px;--sd:5.4s;--sdelay:-3.6099999999999994s">✦</span><span class="drift-star" style="--sx:73%;--sy:13%;--ss:8px;--sd:7.2s;--sdelay:-4.84s">✦</span></div>
     <div class="tools-wrap">
       <div class="tools-heading">
         <div>
@@ -146,7 +146,7 @@
       <a class="next-scroll-link" href="#in-common">Next: explore the overlap <span aria-hidden="true">↓</span></a>
     </div>
   </section>
-  <section class="intersection-section" id="in-common" aria-labelledby="intersection-title">
+  <section class="intersection-section" id="in-common" aria-labelledby="intersection-title"><div class="drift-starfield" aria-hidden="true"><span class="drift-star" style="--sx:34%;--sy:16%;--ss:12px;--sd:7.2s;--sdelay:-3s">✦</span><span class="drift-star" style="--sx:46%;--sy:28%;--ss:8px;--sd:5.4s;--sdelay:-4.23s">✦</span><span class="drift-star" style="--sx:20%;--sy:14%;--ss:15px;--sd:7.2s;--sdelay:-5.46s">✦</span><span class="drift-star" style="--sx:13%;--sy:37%;--ss:9px;--sd:5.4s;--sdelay:-6.6899999999999995s">✦</span><span class="drift-star" style="--sx:39%;--sy:72%;--ss:17px;--sd:7.2s;--sdelay:-0.9199999999999999s">✦</span><span class="drift-star" style="--sx:25%;--sy:76%;--ss:8px;--sd:5.4s;--sdelay:-2.1500000000000004s">✦</span><span class="drift-star" style="--sx:1%;--sy:88%;--ss:11px;--sd:7.2s;--sdelay:-3.379999999999999s">✦</span><span class="drift-star" style="--sx:58%;--sy:82%;--ss:7px;--sd:5.4s;--sdelay:-4.609999999999999s">✦</span><span class="drift-star" style="--sx:82%;--sy:13%;--ss:8px;--sd:7.2s;--sdelay:-5.84s">✦</span></div>
     <div class="intersection-wrap">
       <div class="intersection-heading">
         <p class="intersection-eyebrow"><span></span> 03 / IN COMMON</p>

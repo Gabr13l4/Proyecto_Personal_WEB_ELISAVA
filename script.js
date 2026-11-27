@@ -94,22 +94,22 @@ toolTabs.forEach((tab, index) => {
 });
 selectTool("tracker");
 
-document.querySelectorAll(".range-row input").forEach((range) => {
-  range.addEventListener("input", () => {
-    range.parentElement.querySelector("output").value = range.value;
-  });
+document.querySelectorAll(".range-row input, .med-score-grid input").forEach((range) => {
+  range.addEventListener("input", () => { range.parentElement.querySelector("output").value = range.value; });
 });
-
-const moodButtons = [...document.querySelectorAll(".mood-option")]; let selectedMood = document.querySelector(".mood-option.is-selected")?.dataset.mood || "Okay"; moodButtons.forEach((button) => { button.addEventListener("click", () => { selectedMood = button.dataset.mood; moodButtons.forEach((item) => { const selected = item === button; item.classList.toggle("is-selected", selected); item.setAttribute("aria-pressed", String(selected)); }); }); }); document.querySelector("#save-checkin").addEventListener("click", () => {
-  document.querySelector("#tracker-feedback").textContent = "Mood check-in noted as " + selectedMood + ". It stays on this page and isn’t stored.";
-});
-
-document.querySelector("#routine-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  const medicationTime = document.querySelector("#med-time").value;
-  const mealTime = document.querySelector("#meal-time").value;
-  document.querySelector("#routine-feedback").textContent = `Routine noted for this visit: medication ${medicationTime}, first meal ${mealTime}. This prototype won’t send reminders.`;
-});
+const journalKey="in-common-journal-v1", journalEntries=JSON.parse(localStorage.getItem(journalKey)||"{}");
+let journalDate=new Date().toISOString().slice(0,10);
+const reflections=["Taking things one breath at a time.","Making space for a slower moment.","You’re finding your balance.","There’s a little more room to breathe.","A bright moment is here."];
+function updateZipper(){const ids=["energy-range","weather-range","lightness-range","connection-range"];const vals=ids.map(id=>Number(document.querySelector("#"+id).value));ids.forEach(id=>document.querySelector("#"+id).nextElementSibling.value=document.querySelector("#"+id).value);const avg=vals.reduce((a,b)=>a+b,0)/vals.length;document.querySelector("#zipper-pull").style.left=(12+(avg-1)*19)+"%";document.querySelector("#zipper-reading").textContent=reflections[Math.round(avg)-1];journalEntries[journalDate]={...(journalEntries[journalDate]||{}),checkin:vals,reflection:reflections[Math.round(avg)-1]};}
+["energy-range","weather-range","lightness-range","connection-range"].forEach(id=>document.querySelector("#"+id).addEventListener("input",updateZipper));
+function renderCalendar(){const grid=document.querySelector("#journal-grid"),d=new Date(journalDate+"T12:00:00"),y=d.getFullYear(),m=d.getMonth(),offset=(new Date(y,m,1).getDay()+6)%7,days=new Date(y,m+1,0).getDate();grid.replaceChildren();for(let i=0;i<offset;i++){const blank=document.createElement("span");blank.textContent="";grid.append(blank);}for(let n=1;n<=days;n++){const date=new Date(y,m,n).toISOString().slice(0,10),b=document.createElement("button");b.type="button";b.textContent=n;b.setAttribute("aria-label",new Date(date+"T12:00:00").toLocaleDateString(undefined,{month:"long",day:"numeric"}));if(journalEntries[date]?.note||journalEntries[date]?.checkin)b.classList.add("has-entry");if(date===journalDate)b.classList.add("is-current");b.addEventListener("click",()=>{journalDate=date;document.querySelector("#journal-note").value=journalEntries[date]?.note||"";document.querySelector("#journal-date-title").textContent=new Date(date+"T12:00:00").toLocaleDateString(undefined,{month:"long",day:"numeric"})+" note";document.querySelector("#journal-status").textContent=journalEntries[date]?.reflection||"Select a day to add a note.";renderCalendar();});grid.append(b);}}
+document.querySelector("#journal-note").addEventListener("input",e=>{journalEntries[journalDate]={...(journalEntries[journalDate]||{}),note:e.target.value};localStorage.setItem(journalKey,JSON.stringify(journalEntries));renderCalendar();});
+document.querySelector("#save-checkin").addEventListener("click",()=>{updateZipper();localStorage.setItem(journalKey,JSON.stringify(journalEntries));document.querySelector("#tracker-feedback").textContent="Check-in saved for today.";renderCalendar();});
+const medicationKey="in-common-medication-periods-v1";let medicationPeriods=JSON.parse(localStorage.getItem(medicationKey)||"[]");
+function renderMedicationTimeline(){const container=document.querySelector("#med-history-list");container.replaceChildren();if(!medicationPeriods.length){const empty=document.createElement("p");empty.className="journal-status";empty.textContent="Your saved periods will appear here.";container.append(empty);return;}medicationPeriods.forEach(item=>{const entry=document.createElement("article");entry.className="med-entry";const title=document.createElement("b");title.textContent=item.name;const details=document.createElement("span");details.textContent=" · "+item.start+(item.end?" – "+item.end:" – ongoing")+" · "+item.dose+" · "+item.days.join(", ");entry.append(title,details);if(item.question){const note=document.createElement("div");note.textContent="Note: "+item.question;entry.append(note);}container.append(entry);});}
+document.querySelector("#routine-form").addEventListener("submit",e=>{e.preventDefault();medicationPeriods.push({name:document.querySelector("#med-name").value.trim(),start:document.querySelector("#med-start").value,end:document.querySelector("#med-end").value,dose:document.querySelector("#med-dose").value.trim()||"As prescribed",days:[...document.querySelectorAll("[name=med-day]:checked")].map(x=>x.value),question:document.querySelector("#med-question").value.trim()});localStorage.setItem(medicationKey,JSON.stringify(medicationPeriods));renderMedicationTimeline();document.querySelector("#routine-feedback").textContent="Medication period saved in this browser.";e.currentTarget.reset();});
+document.querySelector("#save-med-day").addEventListener("click",()=>{const key="in-common-wellbeing-v1",logs=JSON.parse(localStorage.getItem(key)||"[]");logs.push({date:new Date().toISOString().slice(0,10),scores:Object.fromEntries([...document.querySelectorAll(".med-score-grid input")].map(x=>[x.id,Number(x.value)])),note:document.querySelector("#med-daily-note").value.trim()});localStorage.setItem(key,JSON.stringify(logs));document.querySelector("#med-day-feedback").textContent="Today’s log saved in this browser.";});
+renderCalendar();updateZipper();renderMedicationTimeline();
 
 const finderSearch = document.querySelector("#finder-search");
 const finderCards = [...document.querySelectorAll(".finder-result")];

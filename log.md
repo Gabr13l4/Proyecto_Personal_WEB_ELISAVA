@@ -36,6 +36,11 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 
 ---
 
+## 2026-11-27 — Refine the emotion zipper and save each change
+- **Canvis:** Rebuilt the check-in card around the Figma layout with the original plum, paper, coral, and lavender palette. Mood slider changes now save immediately per selected date; choosing a calendar day restores its sliders and note.
+- **Motiu:** Make the tracker feel closer to the supplied prototype and keep daily entries available after refresh in the same browser.
+- **Verificació:** Updated the published HTML, CSS, and JavaScript references with a fresh asset version; browser review pending.
+
 ## 2026-11-27 — Expand Hashimoto’s self-tracking tools
 - **Canvis:** Reworked the mood check-in as an emotion zipper with four sliders; added a calendar journal, medication-period timeline, and daily wellbeing log. Entries are saved in the visitor’s browser. Added versioned asset URLs so the updated styles and interactions load without stale browser cache.
 - **Motiu:** Bring the Hashimoto’s section closer to the supplied interactive prototype and make the daily tools useful beyond a single visit.

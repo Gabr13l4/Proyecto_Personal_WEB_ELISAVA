@@ -37,7 +37,7 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 ---
 
 ## 2026-11-27 — Expand Hashimoto’s self-tracking tools
-- **Canvis:** Reworked the mood check-in as an emotion zipper with four sliders; added a calendar journal, medication-period timeline, and daily wellbeing log. Entries are saved in the visitor’s browser.
+- **Canvis:** Reworked the mood check-in as an emotion zipper with four sliders; added a calendar journal, medication-period timeline, and daily wellbeing log. Entries are saved in the visitor’s browser. Added versioned asset URLs so the updated styles and interactions load without stale browser cache.
 - **Motiu:** Bring the Hashimoto’s section closer to the supplied interactive prototype and make the daily tools useful beyond a single visit.
 
 ## 2026-11-25 — Route condition choices to dedicated sections

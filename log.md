@@ -36,6 +36,10 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 
 ---
 
+## 2026-11-27 — Expand Hashimoto’s self-tracking tools
+- **Canvis:** Reworked the mood check-in as an emotion zipper with four sliders; added a calendar journal, medication-period timeline, and daily wellbeing log. Entries are saved in the visitor’s browser.
+- **Motiu:** Bring the Hashimoto’s section closer to the supplied interactive prototype and make the daily tools useful beyond a single visit.
+
 ## 2026-11-25 — Route condition choices to dedicated sections
 - **Canvis:** Added a Celiac section, kept the existing Hashimoto’s tools in their own section, and renamed the shared-care destination to In Common.
 - **Motiu:** Give each home-page topic choice a dedicated place for current and future content.

@@ -471,3 +471,22 @@ body { background: var(--paper); color: var(--plum); }
 @keyframes status-pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,133,82,.23)}50%{box-shadow:0 0 0 7px rgba(255,133,82,0)}}
 @media(max-width:650px){.celiac-heading h2,.tools-heading h2,.intersection-heading h2{letter-spacing:-.055em}.funky-star{font-size:.32em}}
 @media(prefers-reduced-motion:reduce){.funky-star,.map-status-dot{animation:none}.mode-card,.map-panel,.place-panel,.tool-panel,.connection-explorer,.mode-button,.tool-tab,.thread-button,.place-filter,.gf-search-area,.action-button,.card-action,.text-link,.next-scroll-link{transition:none}}
+
+
+/* Conceptual gluten-free map and a shared, starry visual rhythm. */
+.hero::after{height:220px;background:linear-gradient(180deg,transparent 0%,rgba(135,101,221,.09) 32%,#8b7d95 76%,#fbf5f3 100%)}
+.celiac-section{background:linear-gradient(180deg,#fbf5f3 0%,#fbf5f3 78%,#e5dfe8 89%,#8b7d95 97%,#31263e 100%)}
+.gf-map-panel{background:#31263e;color:#fbf5f3;border:1px solid rgba(135,101,221,.2);box-shadow:0 20px 55px rgba(49,38,62,.17)}
+.gf-map-panel .map-toolbar{color:#fbf5f3}.gf-map-panel .map-demo-label{color:#ff8552}.gf-map-shell,.gf-map{background:#31263e}
+.gf-map-footer{color:#d5c9df}.gf-map-footer a{color:#fbf5f3;text-decoration-color:#ff8552}.map-disclaimer{background:rgba(135,101,221,.16);color:#f7effa}
+.map-hint{border:1px solid rgba(251,245,243,.22);background:rgba(49,38,62,.88);color:#fbf5f3;box-shadow:0 8px 24px rgba(0,0,0,.16)}
+.gf-map .leaflet-control-zoom a{background:#483a55;color:#fbf5f3;border-color:rgba(251,245,243,.18)}.gf-map .leaflet-control-zoom a:hover{background:#69547d}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fbf5f3;color:#31263e}.leaflet-popup-content a{color:#6950aa}
+.drift-starfield{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;color:#8765dd}
+.hero .drift-starfield,.intersection-section .drift-starfield{color:#fbf5f3}.celiac-section .drift-starfield{color:#ff8552}.tool-section .drift-starfield{color:#8765dd}
+.drift-star{position:absolute;left:var(--sx);top:var(--sy);font-size:var(--ss);opacity:.36;animation:star-float var(--sd) ease-in-out var(--sdelay) infinite;will-change:transform}
+@keyframes star-float{0%,100%{transform:translate3d(0,0,0) rotate(-12deg);opacity:.2}50%{transform:translate3d(8px,-14px,0) rotate(24deg);opacity:.68}}
+.hero-content,.hero-footer,.celiac-wrap,.tools-wrap,.intersection-wrap{position:relative;z-index:1}.topbar{z-index:2}
+.celiac-section,.tool-section,.intersection-section{scroll-margin-top:0}
+@media(max-width:650px){.hero::after{height:175px}.celiac-section{background:linear-gradient(180deg,#fbf5f3 0%,#fbf5f3 88%,#d8d0df 94%,#31263e 100%)}.drift-star{opacity:.27}}
+@media(prefers-reduced-motion:reduce){.drift-star{animation:none;will-change:auto}}

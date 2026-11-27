@@ -448,3 +448,26 @@ body { background: var(--paper); color: var(--plum); }
 .gf-map .leaflet-popup-content-wrapper,.gf-map .leaflet-popup-tip{background:var(--paper);color:var(--plum)}
 .gf-map .leaflet-popup-content a{color:var(--plum);text-decoration-color:var(--lavender);text-underline-offset:3px}
 .gf-map .leaflet-control-attribution{background:rgba(251,245,243,.92);color:var(--muted)}
+
+/* Playful editorial details, keeping the original plum, paper, coral, and lavender palette. */
+.celiac-section,.tool-section,.intersection-section{position:relative;isolation:isolate;overflow:hidden}
+.celiac-wrap,.tools-wrap,.intersection-wrap{position:relative;z-index:1}
+.celiac-section::before,.tool-section::before,.intersection-section::before{content:"";position:absolute;z-index:0;width:440px;height:440px;border-radius:50%;pointer-events:none;opacity:.55;filter:blur(3px)}
+.celiac-section::before{top:-170px;right:-140px;background:radial-gradient(circle,rgba(255,133,82,.15),rgba(255,133,82,0) 68%)}
+.tool-section::before{top:15%;left:-240px;background:radial-gradient(circle,rgba(135,101,221,.14),rgba(135,101,221,0) 70%)}
+.intersection-section::before{bottom:-210px;right:-140px;background:radial-gradient(circle,rgba(255,133,82,.16),rgba(255,133,82,0) 70%)}
+.celiac-heading h2,.tools-heading h2,.intersection-heading h2{position:relative;letter-spacing:-.065em}
+.funky-star{display:inline-block;margin-left:.16em;font-size:.36em;line-height:1;vertical-align:top;animation:star-drift 4.2s ease-in-out infinite}
+.star-coral{color:var(--coral);animation-delay:-.8s}.star-lavender{color:var(--lavender);animation-delay:-2s}.star-paper{color:var(--coral);animation-delay:-1.4s}
+@keyframes star-drift{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-7px) rotate(12deg)}}
+.celiac-heading>p,.tools-lede,.intersection-heading>p:not(.intersection-eyebrow){max-width:44ch;font-size:clamp(15px,1.35vw,18px);line-height:1.75}
+.mode-card,.map-panel,.place-panel,.tool-panel,.connection-explorer{transition:box-shadow .25s ease,transform .25s ease}
+.mode-card:hover,.map-panel:hover,.place-panel:hover,.tool-panel:hover,.connection-explorer:hover{box-shadow:0 22px 55px rgba(49,38,62,.13)}
+.mode-button,.tool-tab,.thread-button,.place-filter,.gf-search-area,.action-button{transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease}
+.mode-button:hover,.tool-tab:hover,.thread-button:hover,.place-filter:hover,.gf-search-area:hover,.action-button:hover{transform:translateY(-2px)}
+.card-action,.text-link,.next-scroll-link{transition:letter-spacing .18s ease,color .18s ease}
+.card-action:hover,.text-link:hover,.next-scroll-link:hover{letter-spacing:.02em}
+.map-status-dot{animation:status-pulse 2.4s ease-out infinite}
+@keyframes status-pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,133,82,.23)}50%{box-shadow:0 0 0 7px rgba(255,133,82,0)}}
+@media(max-width:650px){.celiac-heading h2,.tools-heading h2,.intersection-heading h2{letter-spacing:-.055em}.funky-star{font-size:.32em}}
+@media(prefers-reduced-motion:reduce){.funky-star,.map-status-dot{animation:none}.mode-card,.map-panel,.place-panel,.tool-panel,.connection-explorer,.mode-button,.tool-tab,.thread-button,.place-filter,.gf-search-area,.action-button,.card-action,.text-link,.next-scroll-link{transition:none}}

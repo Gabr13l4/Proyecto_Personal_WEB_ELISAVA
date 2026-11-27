@@ -36,6 +36,10 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 
 ---
 
+## 2026-11-27 — Save every wellbeing log and keep dates in English
+- **Canvis:** Daily wellbeing scores and notes now save automatically per date, restore when the routine tab is reopened, and remain visible in a saved-log list. Date labels use English regardless of browser locale.
+- **Motiu:** Keep the website language consistent and make each daily log easy to revisit.
+
 ## 2026-11-27 — Refine the emotion zipper and save each change
 - **Canvis:** Rebuilt the check-in card around the Figma layout with the original plum, paper, coral, and lavender palette. Mood slider changes now save immediately per selected date; choosing a calendar day restores its sliders and note.
 - **Motiu:** Make the tracker feel closer to the supplied prototype and keep daily entries available after refresh in the same browser.

@@ -111,3 +111,10 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 - **Motiu:** Adapt the starter template to the specific research findings, UX architecture (tri-mode toggle), and visual identity defined for bridging Celiac Disease and Hashimoto’s Thyroiditis.
 - **Verificació:** Reviewed updated Markdown files and HTML structure on GitHub to confirm formatting and intact `#boton` / `#texto` IDs.
 - **Pendents/incidències:** Implement the split-screen Figma layout, central toggle slider (`Celiac | Intersection | Hashimoto's`), and custom color styles in `style.css` and `script.js`.
+
+
+## 2026-11-27 — Interactive gluten-free world map and playful visual refresh
+- **Changes:** Added an interactive Leaflet world map with place search, area search, category filters, and community-mapped gluten-free listings; refined the project-color map treatment and added playful stars, shapes, stronger type hierarchy, and small interaction details across the site. Updated the Celiac map instructions and kept the interface in English.
+- **Why:** Make the Celiac section useful for discovering nearby options and bring more energy to the whole experience while staying within the project palette.
+- **Verification:** Confirmed on the published page that the map loaded and returned mapped places for the searched area; confirmed the current map and page assets loaded. Source includes OpenStreetMap attribution and a clear note that tags are incomplete and are not safety certifications.
+- **Notes:** Coverage depends on OpenStreetMap tags and the public regional Overpass service; results are not Find Me Gluten Free reviews and should be checked directly with each venue.

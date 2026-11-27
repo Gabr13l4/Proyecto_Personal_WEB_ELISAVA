@@ -36,6 +36,11 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 
 ---
 
+## 2026-11-27 — Simplify the map and connect the visual flow
+- **Changes:** Replaced the detailed street basemap with a dark, hand-shaped world illustration in the project palette; kept gluten-free place markers, place search, and area search. Added more small animated stars across all four sections and softened the color transitions between sections.
+- **Why:** Keep attention on gluten-free places and make the experience feel more cohesive and playful.
+- **Verification:** Pending live page review.
+
 ## 2026-11-27 — Route map searches to regional OpenStreetMap services
 - **Canvis:** Routed gluten-free place searches to the OpenStreetMap regional Overpass service that covers the map center, while retaining a manual search button, a short timeout, and area caching.
 - **Motiu:** Avoid relying on one overloaded worldwide query endpoint for every continent.

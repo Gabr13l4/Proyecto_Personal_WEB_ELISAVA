@@ -74,36 +74,24 @@
         <button class="tool-tab" id="tab-finder" type="button" role="tab" aria-selected="false" aria-controls="panel-finder" data-tool="finder"><span>03</span> Food finder <b aria-hidden="true">↗</b></button>
       </div>
 
-      <div class="tool-panel" id="panel-tracker" role="tabpanel" aria-labelledby="tab-tracker" data-panel="tracker">
-        <div class="panel-intro">
-          <span class="panel-icon tracker-icon" aria-hidden="true">✳</span>
-          <p class="panel-overline">A QUICK CHECK-IN</p>
-          <h3>How are you, today?</h3>
-          <p>Start with your mood, then add a little context. There’s no right score.</p>
+      <div class="tool-panel zipper-panel" id="panel-tracker" role="tabpanel" aria-labelledby="tab-tracker" data-panel="tracker">
+        <div class="zipper-intro"><span class="panel-icon tracker-icon" aria-hidden="true">✳</span><p class="panel-overline">A 30-SECOND CHECK-IN</p><h3>Where are you,<br>right now?</h3><p>Move the sliders and let the zipper bring your feelings together. Every day can look different.</p><div class="panel-note"><span>✧</span> A snapshot for you, not a diagnosis.</div></div>
+        <div class="zipper-form">
+          <label class="zipper-row" for="energy-range"><span>Energy</span><input id="energy-range" type="range" min="1" max="5" value="3"><output for="energy-range">3</output></label>
+          <label class="zipper-row" for="weather-range"><span>Inner weather</span><input id="weather-range" type="range" min="1" max="5" value="3"><output for="weather-range">3</output></label>
+          <label class="zipper-row" for="lightness-range"><span>Lightness</span><input id="lightness-range" type="range" min="1" max="5" value="3"><output for="lightness-range">3</output></label>
+          <label class="zipper-row" for="connection-range"><span>Connection</span><input id="connection-range" type="range" min="1" max="5" value="3"><output for="connection-range">3</output></label>
+          <div class="zipper-zip" aria-label="Your feelings coming together"><span class="zipper-tooth">✦</span><span class="zipper-tooth">☁</span><span class="zipper-tooth">◡</span><span class="zipper-tooth">✧</span><span class="zipper-tooth">♡</span><span class="zipper-pull" id="zipper-pull" aria-hidden="true">↓</span></div>
+          <p class="zipper-reading" id="zipper-reading" aria-live="polite">You’re finding your balance.</p>
+          <div class="zipper-save"><button class="action-button" type="button" id="save-checkin">Save today’s check-in <span aria-hidden="true">↗</span></button><p id="tracker-feedback" aria-live="polite">Your notes stay in this browser.</p></div>
         </div>
-        <div class="tracker-controls">
-          <label class="range-row" for="energy-range"><span>Energy</span><input id="energy-range" type="range" min="1" max="5" value="3"><output for="energy-range">3</output></label>
-          <label class="range-row" for="focus-range"><span>Focus</span><input id="focus-range" type="range" min="1" max="5" value="3"><output for="focus-range">3</output></label>
-          <fieldset class="mood-choice"><legend>Choose the mood that feels closest</legend><div class="mood-options" role="group" aria-label="Mood"><button type="button" class="mood-option" data-mood="Low" aria-pressed="false"><span aria-hidden="true">☁</span><small>Low</small></button><button type="button" class="mood-option" data-mood="Tired" aria-pressed="false"><span aria-hidden="true">◔</span><small>Tired</small></button><button type="button" class="mood-option is-selected" data-mood="Okay" aria-pressed="true"><span aria-hidden="true">◡</span><small>Okay</small></button><button type="button" class="mood-option" data-mood="Good" aria-pressed="false"><span aria-hidden="true">☺</span><small>Good</small></button><button type="button" class="mood-option" data-mood="Great" aria-pressed="false"><span aria-hidden="true">✦</span><small>Great</small></button></div></fieldset><p class="tracker-context-label">A little more context (optional)</p>
-          <div class="tracker-bottom"><button class="action-button" type="button" id="save-checkin">Complete check-in <span aria-hidden="true">↗</span></button><p id="tracker-feedback" aria-live="polite">Scores stay on this page while it’s open.</p></div>
-        </div>
-        <div class="panel-note"><span>✧</span> A snapshot for you, not a diagnosis.</div>
+        <div class="journal"><div><h4>Your month at a glance</h4><div class="journal-grid" id="journal-grid" aria-label="Choose a journal date"></div><p class="journal-status" id="journal-status">Select a day to add a note.</p></div><div><h4 id="journal-date-title">Today’s note</h4><label class="sr-only" for="journal-note">Private journal note</label><textarea id="journal-note" placeholder="What would you like to remember about today?"></textarea><p class="journal-status">Saved in this browser and not sent to a server.</p></div></div>
       </div>
 
-      <div class="tool-panel" id="panel-routine" role="tabpanel" aria-labelledby="tab-routine" data-panel="routine" hidden>
-        <div class="panel-intro">
-          <span class="panel-icon routine-icon" aria-hidden="true">◷</span>
-          <p class="panel-overline">YOUR ROUTINE, YOUR TIMING</p>
-          <h3>Keep the day in view.</h3>
-          <p>Add the schedule you’ve agreed with your care team.</p>
-        </div>
-        <form class="routine-controls" id="routine-form">
-          <label class="time-field">Medication reminder <input id="med-time" type="time" value="07:00" required></label>
-          <label class="time-field">First meal reminder <input id="meal-time" type="time" value="08:00" required></label>
-          <button class="action-button" type="submit">Update my routine <span aria-hidden="true">↗</span></button>
-          <p id="routine-feedback" aria-live="polite">Set reminders around the instructions from your clinician or pharmacist.</p>
-        </form>
-        <div class="panel-note"><span>✧</span> Reminders support your plan; they don’t replace medical advice.</div>
+      <div class="tool-panel med-panel" id="panel-routine" role="tabpanel" aria-labelledby="tab-routine" data-panel="routine" hidden>
+        <div class="zipper-intro"><span class="panel-icon routine-icon" aria-hidden="true">◷</span><p class="panel-overline">YOUR ROUTINE, YOUR TIMING</p><h3>Keep the whole<br>picture together.</h3><p>Log a medication period and a daily check-in to notice what you may want to discuss with your care team.</p><div class="panel-note"><span>✧</span> This journal does not recommend or change medication.</div></div>
+        <form class="med-form" id="routine-form"><h3>Medication period</h3><label>Medication name<input id="med-name" type="text" placeholder="Name from your prescription" required></label><div class="med-date-fields"><label>Started<input id="med-start" type="date" required></label><label>Ended (optional)<input id="med-end" type="date"></label></div><label>Dose / unit<input id="med-dose" type="text" placeholder="As prescribed"></label><fieldset class="med-days"><legend>Days taken</legend><label><input type="checkbox" name="med-day" value="Mon" checked> Mon</label><label><input type="checkbox" name="med-day" value="Tue" checked> Tue</label><label><input type="checkbox" name="med-day" value="Wed" checked> Wed</label><label><input type="checkbox" name="med-day" value="Thu" checked> Thu</label><label><input type="checkbox" name="med-day" value="Fri" checked> Fri</label><label><input type="checkbox" name="med-day" value="Sat" checked> Sat</label><label><input type="checkbox" name="med-day" value="Sun" checked> Sun</label></fieldset><label>Questions or notes<textarea id="med-question" rows="3" placeholder="Anything to bring up at your next appointment?"></textarea></label><input id="med-time" type="hidden" value="07:00"><input id="meal-time" type="hidden" value="08:00"><button class="action-button" type="submit">Save medication period <span aria-hidden="true">↗</span></button><p id="routine-feedback" aria-live="polite"></p></form>
+        <div class="med-scores"><h4>Daily wellbeing check-in</h4><p>Record how the day felt alongside your routine.</p><div class="med-score-grid"><label>Mood<input id="mood-score" type="range" min="1" max="5" value="3"><output for="mood-score">3</output></label><label>Energy<input id="energy-score" type="range" min="1" max="5" value="3"><output for="energy-score">3</output></label><label>Sleep<input id="sleep-score" type="range" min="1" max="5" value="3"><output for="sleep-score">3</output></label><label>Focus<input id="focus-score" type="range" min="1" max="5" value="3"><output for="focus-score">3</output></label><label>Digestion<input id="digestion-score" type="range" min="1" max="5" value="3"><output for="digestion-score">3</output></label><label>Stress<input id="stress-score" type="range" min="1" max="5" value="3"><output for="stress-score">3</output></label></div><label class="med-note-label">Daily note<textarea id="med-daily-note" rows="2" placeholder="Optional note about today"></textarea></label><button class="action-button" type="button" id="save-med-day">Save today’s log <span aria-hidden="true">↗</span></button><p id="med-day-feedback" aria-live="polite"></p></div><div class="med-history"><h4>Medication timeline</h4><div class="med-history-list" id="med-history-list"></div></div>
       </div>
 
       <div class="tool-panel finder-panel" id="panel-finder" role="tabpanel" aria-labelledby="tab-finder" data-panel="finder" hidden>
@@ -125,7 +113,7 @@
         </div>
         <div class="panel-note"><span>✧</span> Prompts help start a conversation; they don’t certify food as safe.</div>
       </div>
-      <p class="privacy-note">This prototype doesn’t send or store your check-ins.</p>
+      <p class="privacy-note">Your entries are saved only in this browser and are not sent to a server.</p>
       <a class="next-scroll-link" href="#in-common">Next: explore the overlap <span aria-hidden="true">↓</span></a>
     </div>
   </section>

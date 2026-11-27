@@ -373,3 +373,10 @@ body { background: var(--paper); color: var(--plum); }
   .zipper-row{grid-template-columns:88px minmax(0,1fr) 48px;gap:7px;font-size:11px}
   .zipper-intro>p:not(.panel-overline){max-width:none;font-size:14px}
 }
+
+@media(max-width:700px){
+  .tool-panel.zipper-panel{width:100%;grid-template-columns:minmax(0,1fr)!important}
+  .tool-panel.zipper-panel>*{grid-column:1/-1;width:100%;min-width:0}
+  .tool-panel.zipper-panel .zipper-intro>p:not(.panel-overline){width:auto;max-width:100%;overflow-wrap:anywhere}
+  .tool-panel.zipper-panel .journal textarea{box-sizing:border-box}
+}

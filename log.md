@@ -36,6 +36,11 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 
 ---
 
+## 2026-11-27 — Route map searches to regional OpenStreetMap services
+- **Canvis:** Routed gluten-free place searches to the OpenStreetMap regional Overpass service that covers the map center, while retaining a manual search button, a short timeout, and area caching.
+- **Motiu:** Avoid relying on one overloaded worldwide query endpoint for every continent.
+- **Verificació:** Checked that city search and filter controls are wired; live results depend on tagged OpenStreetMap coverage and regional service availability.
+
 ## 2026-11-27 — Add playful visual details and stronger prompts
 - **Canvis:** Added animated star accents, soft color orbits, varied type emphasis, hover feedback, and clearer prompts to explore the map, tracker, and shared-care threads. Kept the project palette and respected reduced-motion preferences.
 - **Motiu:** Make the full site more lively and invite visitors to interact with its tools.

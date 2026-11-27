@@ -36,6 +36,11 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 
 ---
 
+## 2026-11-27 — Replace the sample Celiac map with a live world map
+- **Canvis:** Added an interactive Leaflet world map with OpenStreetMap tiles, city search, area-based gluten-free listings, dedicated-GF / dining / shop filters, map markers, and links to source records. Added a clear note about incomplete community tags and venue safety verification.
+- **Motiu:** Make the Celiac section useful for exploring real mapped gluten-free options around the world.
+- **Verificació:** Reviewed the source and connected it to the OpenStreetMap `diet:gluten_free` tag; live data availability depends on community mapping.
+
 ## 2026-11-27 — Enlarge the diary and save every wellbeing log
 - **Canvis:** Made the diary a larger, rounded card matching the zipper panel, with a roomier calendar and writing area. Daily wellbeing scores and notes save automatically per date, restore when the routine tab is reopened, and remain visible in a saved-log list. Date labels use English regardless of browser locale.
 - **Motiu:** Keep the website language consistent and make daily entries easy to write and revisit.

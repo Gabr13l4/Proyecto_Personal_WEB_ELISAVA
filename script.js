@@ -100,8 +100,8 @@ document.querySelectorAll(".range-row input").forEach((range) => {
   });
 });
 
-document.querySelector("#save-checkin").addEventListener("click", () => {
-  document.querySelector("#tracker-feedback").textContent = "Check-in noted for this visit. It isn’t stored.";
+const moodButtons = [...document.querySelectorAll(".mood-option")]; let selectedMood = document.querySelector(".mood-option.is-selected")?.dataset.mood || "Okay"; moodButtons.forEach((button) => { button.addEventListener("click", () => { selectedMood = button.dataset.mood; moodButtons.forEach((item) => { const selected = item === button; item.classList.toggle("is-selected", selected); item.setAttribute("aria-pressed", String(selected)); }); }); }); document.querySelector("#save-checkin").addEventListener("click", () => {
+  document.querySelector("#tracker-feedback").textContent = "Mood check-in noted as " + selectedMood + ". It stays on this page and isn’t stored.";
 });
 
 document.querySelector("#routine-form").addEventListener("submit", (event) => {
@@ -165,6 +165,9 @@ threadButtons.forEach((button) => {
     document.querySelector("#thread-kicker").textContent = thread.kicker;
     document.querySelector("#thread-title").textContent = thread.title;
     document.querySelector("#thread-copy").textContent = thread.copy;
-    document.querySelector("#thread-prompt").textContent = thread.prompt;
+    document.querySelector("#thread-prompt").textContent = thread.prompt; 
   });
 });
+
+
+const placeSearch = document.querySelector("#place-search"); const placeCards = [...document.querySelectorAll(".place-card")]; const placePins = [...document.querySelectorAll(".map-pin")]; const placeFilters = [...document.querySelectorAll(".place-filter")]; const placeEmpty = document.querySelector("#place-empty"); const placeCount = document.querySelector("#place-count"); let activePlaceFilter = "all"; function updatePlaces() { const query = placeSearch.value.trim().toLowerCase(); let visiblePlaces = 0; placeCards.forEach((card) => { const matchesQuery = !query || card.textContent.toLowerCase().includes(query); const matchesFilter = activePlaceFilter === "all" || card.dataset.kind === activePlaceFilter; const visible = matchesQuery && matchesFilter; card.hidden = !visible; const pin = placePins.find((item) => item.dataset.place === card.dataset.placeCard); if (pin) pin.hidden = !visible; if (visible) visiblePlaces += 1; }); placeCount.textContent = visiblePlaces + (visiblePlaces === 1 ? " example" : " examples"); placeEmpty.hidden = visiblePlaces > 0; } function selectPlace(placeId) { placeCards.forEach((card) => card.classList.toggle("is-selected", card.dataset.placeCard === placeId)); placePins.forEach((pin) => pin.classList.toggle("is-selected", pin.dataset.place === placeId)); } placeSearch.addEventListener("input", updatePlaces); placeFilters.forEach((button) => { button.addEventListener("click", () => { activePlaceFilter = button.dataset.placeFilter; placeFilters.forEach((item) => { const selected = item === button; item.classList.toggle("is-active", selected); item.setAttribute("aria-pressed", String(selected)); }); updatePlaces(); }); }); placePins.forEach((pin) => pin.addEventListener("click", () => selectPlace(pin.dataset.place))); document.querySelectorAll("[data-select-place]").forEach((button) => { button.addEventListener("click", () => selectPlace(button.dataset.selectPlace)); });

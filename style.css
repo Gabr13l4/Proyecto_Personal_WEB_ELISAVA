@@ -440,3 +440,11 @@ body { background: var(--paper); color: var(--plum); }
 .gf-place-list .place-empty{color:var(--muted);font-size:12px;line-height:1.5}
 @media(max-width:850px){.gf-discovery{grid-template-columns:1fr}.gf-map-shell,.gf-map{height:430px;min-height:430px}.gf-place-list{max-height:340px}}
 @media(max-width:480px){.gf-map-shell,.gf-map{height:360px;min-height:360px}.gf-place-panel{padding:16px}.gf-place-panel .place-panel-top h3{font-size:19px}.gf-map-footer{font-size:9px}}
+
+/* Bring the real-world basemap into the In Common palette. */
+.gf-map-shell,.gf-map{background:var(--paper)}
+.gf-map .leaflet-tile{filter:grayscale(.58) sepia(.16) hue-rotate(225deg) saturate(.72) brightness(1.03)}
+.gf-map .leaflet-control-zoom a{background:var(--paper);border-color:var(--line);color:var(--plum)}
+.gf-map .leaflet-popup-content-wrapper,.gf-map .leaflet-popup-tip{background:var(--paper);color:var(--plum)}
+.gf-map .leaflet-popup-content a{color:var(--plum);text-decoration-color:var(--lavender);text-underline-offset:3px}
+.gf-map .leaflet-control-attribution{background:rgba(251,245,243,.92);color:var(--muted)}

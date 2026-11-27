@@ -37,7 +37,7 @@ Omet els camps que no siguin pertinents. Mantén les entrades concises i orienta
 ---
 
 ## 2026-11-27 — Replace the sample Celiac map with a live world map
-- **Canvis:** Added an interactive Leaflet world map with OpenStreetMap tiles, city search, area-based gluten-free listings, dedicated-GF / dining / shop filters, map markers, and links to source records. Added a clear note about incomplete community tags and venue safety verification.
+- **Canvis:** Added an interactive Leaflet world map with a plum-and-lavender-tinted OpenStreetMap basemap, city search, area-based gluten-free listings, dedicated-GF / dining / shop filters, map markers, and links to source records. Added a visible note that searches go to OpenStreetMap services. Added a clear note about incomplete community tags and venue safety verification.
 - **Motiu:** Make the Celiac section useful for exploring real mapped gluten-free options around the world.
 - **Verificació:** Reviewed the source and connected it to the OpenStreetMap `diet:gluten_free` tag; live data availability depends on community mapping.
 
